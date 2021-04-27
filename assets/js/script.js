@@ -6,6 +6,7 @@ class AudioController {
         this.victorySound = new Audio('assets/song/applause.wav');
         this.gameOverSound = new Audio('assets/song/boo.wav');
         this.bgMusic.volume = 0.5;
+        this.gameOverSound.volume = 0.5;
         this.bgMusic.loop = true;
     }
     startMusic() {
@@ -142,7 +143,7 @@ class gamePlay {
 function ready() {
     let overlays = document.querySelectorAll('.overlay-text');
     let cards = document.querySelectorAll('.card');
-    let game = new gamePlay(10, cards);
+    let game = new gamePlay(100, cards);
 
     overlays.forEach((overlay) => {
         overlay.addEventListener('click', () => {
